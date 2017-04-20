@@ -1,4 +1,4 @@
-message = "lbh zhfg hayrnea jung lbh unir yrnearq"
+message = "lbh zhfg hayrnea jung lbh unir yrnearq!"
 
 decrypted = "abcdefghijklmnopqrstuvwxyz "
 encrypted = "nopqrstuvwxyzabcdefghijklm "
@@ -11,9 +11,12 @@ decrypted_message = []
 
 
 def decryption_function(encrypted_letter):
-
-	number = encrypted_list.index(encrypted_letter)
-	decrypted_message.append(decrypted_list[number])
+    try:
+	    number = encrypted_list.index(encrypted_letter)
+    except ValueError:
+        decrypted_message.append(encrypted_letter)
+    else:
+	    decrypted_message.append(decrypted_list[number])
 
 	
 for i in range(0, len(message_list)):

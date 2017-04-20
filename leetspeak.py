@@ -19,7 +19,7 @@ character = list(string)
 
 
 for i in range(0,len(character)):
-	if character[i] == "a":
+	if character[i].upper() == "A":
 		character.remove("a")
 		character.insert(i, "4")
 	if character[i] == "e":
